@@ -96,8 +96,43 @@ class SortingRobot:
         """
         Sort the robot's list.
         """
-        # Fill this out
-        pass
+
+        self.swap_item() # grab first item
+        self.set_light_on() # set light on to represent robot is sorting
+
+        # I can choose from insertion sort, bubble sort, and selection sort from
+        # what we have learned this past week. 
+        # i'm going to try the selection sort because it seems like I'll be able to 
+        # use use the robots in house methods easier with its algorithim and because I don't
+        # have access to self._list to grab the length to create a for loop and I'm not allowed
+        # to save variables.
+
+        # steps from training kit:
+        # look through each number in list, hold onto the smallest number robot finds
+        # once we find it, we swap the lowest number with the first position of the list
+        # now the first position has the lowest number. Now we repeat the whole thing, but 
+        # swap the lowest number with the second position. 
+        # I need a way to increment the starting position by 1 each time I swap the lowest number
+        # into the beginning of the list. 
+
+        # steps with robot methods:
+        # Robot has the first item in the list, it is an arbitrary number, could be anything.
+        # Robot has its light turned on to show its working (i.e. sorting)
+        # Robot put the variable "NONE" in the first items place. So "NONE" is currenlty in list[0].
+        # While Robot can move to the right, Robot should check if his item is greater then
+        # list[current_position]. If robots item is greater, then swap items. 
+        # After Robot can no longer move right, the while loop ends, and robot should have the smallest
+        # item in its hands. 
+        # Create a new while loop, while robot can move left, check if list[current_position] == "NONE",
+        # if it does == "NONE", then that means we found the first place where the robot swapped the first 
+        # item! So go ahead and swap the smallest item for "NONE". 
+        # If robot can move right, move right one position and swap his "NONE" for a new item to check. 
+        # Then repeat the first while loop to find the new smallest number by going to the right until 
+        # you can't anymore, and then go to the left until you find list[current_position] == "NONE".
+        # once you've found that you can swap in the smallest number again! Continue this process
+        # until you reach the end of the list. (i.e. robot can't move right anymore)
+        # at that point I can tell the robot to turn its light off and be done. 
+
 
 
 if __name__ == "__main__":
