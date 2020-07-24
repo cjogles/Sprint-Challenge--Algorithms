@@ -4,7 +4,7 @@
 
 a)
 
-O(n) because the function checks if A is less then N cubed every time AFTER A has been added to by A plus n squared. N cubed minus N squared leaves us with N. Excluding constants.
+O(n) because the function checks if A is less then N cubed every time AFTER A has been added to by A plus n squared. N cubed divided by N squared leaves us with N. Excluding constants.
 
 b)
 

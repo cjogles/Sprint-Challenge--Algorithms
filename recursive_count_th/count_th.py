@@ -13,7 +13,7 @@ def count_th(word):
             return 0
     else:
         if first_2_chars == "th":
-            return 1 + count_th(word[1:])
+            return 1 + count_th(word[2:])
         else:
             return count_th(word[1:])
 
